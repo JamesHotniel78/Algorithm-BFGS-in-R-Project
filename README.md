@@ -12,8 +12,8 @@ The binary logistic regression parameter estimates were calculated with the help
 Syntax:
 
 ##Statistic Deskription
-library("pastecs")
-library("dplyr")
+    library("pastecs")
+    library("dplyr")
 data=read.csv(file.choose(), header=TRUE, sep= ";")
 View(data)
 names(data)
