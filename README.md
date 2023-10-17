@@ -9,8 +9,9 @@ Syntax:
 ##Estimasi Parameter
 > library("maxLik")
 #Fungsi Likelihood
->  ll<- function(par){
-+      y<- as.vector(data$Y)
+
+>     ll<- function(par){
++     y<- as.vector(data$Y)
 +     x<- as.matrix(cbind(1, data$X1, data$X2, data$X3, data$X5))
 +     n = length(y)
 +     m = length(par)
