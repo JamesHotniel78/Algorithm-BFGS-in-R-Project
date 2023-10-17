@@ -6,13 +6,12 @@ The research variables consist of a dependent variable (Y) and an independent va
 The binary logistic regression parameter estimates were calculated with the help of R software using the "maxLik" package.
 Syntax:
 
-##Statdes
+##Statistic Deskription
 >library("pastecs")
 >library("dplyr")
 >data=read.csv(file.choose(), header=TRUE, sep= ";")
 >View(data)
 >names(data)
-
 >data$X2<-as.factor(data$X2)
 >data$X4<-as.factor(data$X4)
 >data$X41<-ifelse(data$X4==1,1,0)
@@ -64,12 +63,12 @@ tab.x5.x6=table(data$X5,data$X6)
 >ind.test.x5.x6=chisq.test(tab.x5.x6)
 >ind.test.x5.x6
 
-##Estimasi Parameter
+##Parameter Estimation
 >library("maxLik")
 >library("optimx")
 >library("pscl")
 
-#Fungsi Likelihood
+#Likelihood Function
 >ll<- function(par){
   y<- as.vector(data$Y)
   x<- as.matrix(cbind(1, data$X1, data$X2, data$X3, data$X5, data$X6, data$X7))
@@ -113,7 +112,7 @@ tab.x5.x6=table(data$X5,data$X6)
 >gradient(mle)
 >hessian(mle)
 
-##Uji Simultan
+##Simultan Test
 >library("MASS")
 >llfull<-as.matrix(ll(c(coef(mle))))
 >llreduced<-as.matrix(ll(c(0,0,0,0,0,0,0,0,0,0)))
@@ -126,7 +125,7 @@ tab.x5.x6=table(data$X5,data$X6)
 >p.val <-pchisq(LRT, df = 9, lower.tail=FALSE)
 >p.val
 
-##Uji Parsial
+##Parsial Test
 >BFGS=coef(mle)
 >BFGS
 >se=stdEr(mle)
