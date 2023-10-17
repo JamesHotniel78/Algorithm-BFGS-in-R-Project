@@ -12,11 +12,11 @@ The binary logistic regression parameter estimates were calculated with the help
 Syntax:
 
 ##Statistic Deskription
-    library("pastecs")
-    library("dplyr")
-data=read.csv(file.choose(), header=TRUE, sep= ";")
-View(data)
-names(data)
+>library("pastecs")
+>library("dplyr")
+>data=read.csv(file.choose(), header=TRUE, sep= ";")
+>View(data)
+>names(data)
 >data$X2<-as.factor(data$X2)
 >data$X4<-as.factor(data$X4)
 >data$X41<-ifelse(data$X4==1,1,0)
