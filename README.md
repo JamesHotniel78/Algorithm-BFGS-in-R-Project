@@ -2,7 +2,6 @@
 OPTIMIZATION OF BINARY LOGISTIC REGRESSION PARAMETERS USING THE BROYDEN-FLETCHER-GOLDFARB-SHANNO ALGORITHM IN THE QUASI-NEWTON METHOD
 
 The following is the syntax of the BFGS algorithm in Binary Logistic Regression
-
 Case Study: Study Period Status of FMIPA Undergraduate Program Graduates Mulawarman University in 2021
 
 The research variables consist of a dependent variable (Y) and an independent variable (X). The dependent variable is the study period statistics of graduates of the FMIPA Mulawarman University Undergraduate Program in 2021 (Y). Independent variables include Grade Point Average (GPA) (X1), gender (X2), TOEFL score (X3), study program (X4), high school origin status (X5), region of origin (X6), and age (X7) . Variable notation, data types, operational definitions of variables.
